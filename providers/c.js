@@ -9,7 +9,8 @@ const signatureSnippet = (signature) => {
 const getMethodSuggestion = ({name, type, signature}) => ({
     snippet: `${name}(${signatureSnippet(signature)})`,
     type: 'function',
-    description: `${type} ${name}(${signature.join(', ')})`
+    description: `${type} ${name}(${signature.join(', ')})`,
+    rightLabel: type
 });
 
 export default class CProvider {
